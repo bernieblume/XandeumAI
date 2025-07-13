@@ -27,7 +27,9 @@ export default defineConfig({
   envDir: '../',
   envPrefix: ['VITE_', 'SCRIPT_', 'DOMAIN_', 'ALLOW_'],
   plugins: [
-    react(),
+    react({
+      typescript: false
+    }),
     nodePolyfills(),
     VitePWA({
       injectRegister: 'auto', // 'auto' | 'manual' | 'disabled'
